@@ -1,0 +1,345 @@
+{
+  "models": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "openai/gpt-oss-120b",
+    "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "deepseek-ai/DeepSeek-V4-Pro-0813"
+  ],
+  "slices": [
+    [
+      1,
+      10
+    ],
+    [
+      101,
+      110
+    ],
+    [
+      201,
+      210
+    ],
+    [
+      301,
+      310
+    ]
+  ],
+  "summary": {
+    "agree": 39,
+    "conflict": 0,
+    "singleton": 25
+  },
+  "validated_rows": {
+    "10075310": {
+      "first_name": "Darnell",
+      "last_name": "Hairston",
+      "date_of_birth": "2008-04-26",
+      "mobile_phone": "(614) 555-0107",
+      "email": "darnell_hairston7@mail.example.com",
+      "city": "Columbus"
+    },
+    "10225206": {
+      "first_name": "Christopher",
+      "last_name": "Allen",
+      "date_of_birth": "1972-08-20",
+      "mobile_phone": "(740) 555-0113",
+      "email": "callen43@mail.example.com",
+      "city": "Lewis Center"
+    },
+    "11064021": {
+      "first_name": "Amber",
+      "last_name": "Powell",
+      "date_of_birth": "1987-10-08",
+      "mobile_phone": "(614) 555-0120",
+      "email": "apowell85@example.com",
+      "city": "Columbus"
+    },
+    "11448857": {
+      "first_name": "Angela",
+      "last_name": "Allen",
+      "date_of_birth": "1968-01-04",
+      "mobile_phone": "(380) 555-0167",
+      "email": "angela.allen368@example.org",
+      "city": "Columbus"
+    },
+    "11790248": {
+      "first_name": "Mustafa",
+      "last_name": "Abdi",
+      "date_of_birth": "2016-04-05",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Columbus"
+    },
+    "12264858": {
+      "first_name": "Abdirizak",
+      "last_name": "Abdi",
+      "date_of_birth": "2016-09-15",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Columbus"
+    },
+    "12515822": {
+      "first_name": "Jalen",
+      "last_name": "Hairston",
+      "date_of_birth": "1988-07-24",
+      "mobile_phone": "(380) 555-0190",
+      "email": "jalen_hairston@example.net",
+      "city": "Columbus"
+    },
+    "13070559": {
+      "first_name": "Bishnu",
+      "last_name": "Limbu",
+      "date_of_birth": "1974-03-07",
+      "mobile_phone": "(614) 555-0148",
+      "email": "bishnulimbu74@example.net",
+      "city": "Columbus"
+    },
+    "13591700": {
+      "first_name": "Anna",
+      "last_name": "Limbu",
+      "date_of_birth": "2008-05-03",
+      "mobile_phone": "(614) 555-0159",
+      "email": null,
+      "city": "Columbus"
+    },
+    "14355130": {
+      "first_name": "Matthew",
+      "last_name": "Lewis",
+      "date_of_birth": "1987-05-11",
+      "mobile_phone": "(614) 555-0153",
+      "email": "lewis.matthew1@example.com",
+      "city": "Columbus"
+    },
+    "15804055": {
+      "first_name": "Carolyn",
+      "last_name": "Haas",
+      "date_of_birth": "1942-11-16",
+      "mobile_phone": "(740) 555-0107",
+      "email": null,
+      "city": "Delaware"
+    },
+    "16221746": {
+      "first_name": "Hibo",
+      "last_name": "Abdi",
+      "date_of_birth": "1988-07-08",
+      "mobile_phone": "(614) 555-0181",
+      "email": "hiboa19882@inbox.example.net",
+      "city": "Columbus"
+    },
+    "18185530": {
+      "first_name": "Maya",
+      "last_name": "Limbu",
+      "date_of_birth": "1988-04-15",
+      "mobile_phone": "(614) 555-0101",
+      "email": "mlimbu9@example.net",
+      "city": "Columbus"
+    },
+    "18680505": {
+      "first_name": "Madison",
+      "last_name": "Green",
+      "date_of_birth": "2019-12-06",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Pickerington"
+    },
+    "19116956": {
+      "first_name": "Anthony",
+      "last_name": "Powell",
+      "date_of_birth": "1983-07-03",
+      "mobile_phone": "(740) 555-0171",
+      "email": "anthonyp19835@example.net",
+      "city": "Sunbury"
+    },
+    "19679386": {
+      "first_name": "Jeffrey",
+      "last_name": "Green",
+      "date_of_birth": "1989-07-11",
+      "mobile_phone": "(614) 555-0166",
+      "email": "jeffrey_green3@inbox.example.net",
+      "city": "Columbus"
+    },
+    "20626587": {
+      "first_name": "James",
+      "last_name": "Haas",
+      "date_of_birth": "1940-07-04",
+      "mobile_phone": "(740) 555-0120",
+      "email": "james_haas@example.com",
+      "city": "Delaware"
+    },
+    "21298098": {
+      "first_name": "Robert",
+      "last_name": "Powell",
+      "date_of_birth": "1971-08-06",
+      "mobile_phone": "(614) 555-0115",
+      "email": "robertp19717@example.net",
+      "city": "Reynoldsburg"
+    },
+    "21725898": {
+      "first_name": "Taylor",
+      "last_name": "Green",
+      "date_of_birth": "2002-11-13",
+      "mobile_phone": "(614) 555-0197",
+      "email": null,
+      "city": "Grove City"
+    },
+    "21962484": {
+      "first_name": "Shanice",
+      "last_name": "Lewis",
+      "date_of_birth": "2012-02-18",
+      "mobile_phone": "(614) 555-0147",
+      "email": null,
+      "city": "Columbus"
+    },
+    "22658093": {
+      "first_name": "Jacob",
+      "last_name": "Green",
+      "date_of_birth": "2000-02-16",
+      "mobile_phone": "(614) 555-0162",
+      "email": "jacob_green@inbox.example.net",
+      "city": "Grove City"
+    },
+    "23334682": {
+      "first_name": "David",
+      "last_name": "Adams",
+      "date_of_birth": "1940-04-27",
+      "mobile_phone": "(614) 555-0177",
+      "email": null,
+      "city": "Gahanna"
+    },
+    "23443797": {
+      "first_name": "Joseph",
+      "last_name": "Lewis",
+      "date_of_birth": "1985-07-27",
+      "mobile_phone": "(614) 555-0156",
+      "email": "joseph.lewis499@example.com",
+      "city": "Columbus"
+    },
+    "23632582": {
+      "first_name": "Anthony",
+      "last_name": "Allen",
+      "date_of_birth": "1985-04-24",
+      "mobile_phone": "(614) 555-0105",
+      "email": "anthony.allen@inbox.example.net",
+      "city": "Columbus"
+    },
+    "24865267": {
+      "first_name": "Addison",
+      "last_name": "Powell",
+      "date_of_birth": "2011-04-03",
+      "mobile_phone": "(740) 555-0150",
+      "email": "addison.powell@example.net",
+      "city": "Sunbury"
+    },
+    "25456254": {
+      "first_name": "Ella",
+      "last_name": "Hairston",
+      "date_of_birth": "2014-06-18",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Columbus"
+    },
+    "26204241": {
+      "first_name": "Stephanie",
+      "last_name": "Green",
+      "date_of_birth": "1984-08-31",
+      "mobile_phone": "(220) 555-0167",
+      "email": "stephanie.green279@example.com",
+      "city": "Pickerington"
+    },
+    "26413815": {
+      "first_name": "Felicia",
+      "last_name": "Hairston",
+      "date_of_birth": "1991-01-10",
+      "mobile_phone": "(614) 555-0147",
+      "email": "felicia.hairston86@example.com",
+      "city": "Columbus"
+    },
+    "26532035": {
+      "first_name": "Owen",
+      "last_name": "Green",
+      "date_of_birth": "2025-02-20",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Grove City"
+    },
+    "26564679": {
+      "first_name": "Olivia",
+      "last_name": "Lewis",
+      "date_of_birth": "2018-08-21",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Columbus"
+    },
+    "26653151": {
+      "first_name": "Andrew",
+      "last_name": "Allen",
+      "date_of_birth": "2013-08-02",
+      "mobile_phone": "(614) 555-0109",
+      "email": null,
+      "city": "Dublin"
+    },
+    "26707931": {
+      "first_name": "Ezra",
+      "last_name": "Hairston",
+      "date_of_birth": "2021-10-14",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Columbus"
+    },
+    "27372392": {
+      "first_name": "Rachel",
+      "last_name": "Powell",
+      "date_of_birth": "1980-07-09",
+      "mobile_phone": "(740) 555-0194",
+      "email": "rachel_powell@example.org",
+      "city": "Sunbury"
+    },
+    "27532986": {
+      "first_name": "Dhan",
+      "last_name": "Limbu",
+      "date_of_birth": "1973-07-27",
+      "mobile_phone": "(380) 555-0183",
+      "email": "dhanlimbu73@inbox.example.net",
+      "city": "Columbus"
+    },
+    "27804205": {
+      "first_name": "Linda",
+      "last_name": "Adams",
+      "date_of_birth": "1944-12-15",
+      "mobile_phone": "(614) 555-0146",
+      "email": "linda.adams@example.org",
+      "city": "Gahanna"
+    },
+    "27810173": {
+      "first_name": "Mohamed",
+      "last_name": "Abdi",
+      "date_of_birth": "1986-03-23",
+      "mobile_phone": "(614) 555-0190",
+      "email": null,
+      "city": "Columbus"
+    },
+    "28773041": {
+      "first_name": "Bhim",
+      "last_name": "Limbu",
+      "date_of_birth": "1986-06-22",
+      "mobile_phone": "(614) 555-0152",
+      "email": "bhiml1986@example.net",
+      "city": "Columbus"
+    },
+    "28937096": {
+      "first_name": "Levi",
+      "last_name": "Green",
+      "date_of_birth": "2026-09-03",
+      "mobile_phone": null,
+      "email": null,
+      "city": "Grove City"
+    },
+    "29614019": {
+      "first_name": "Jessica",
+      "last_name": "Lewis",
+      "date_of_birth": "1987-06-03",
+      "mobile_phone": "(614) 555-0140",
+      "email": null,
+      "city": "Columbus"
+    }
+  }
+}
