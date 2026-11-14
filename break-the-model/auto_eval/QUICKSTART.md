@@ -5,7 +5,7 @@ This guide shows you how to set up and run automated attack evaluation in 5 minu
 ## Step 1: Installation (One-Time)
 
 ```bash
-cd /path/to/entropy_hack/break-the-model-starter/auto_eval
+cd /path/to/entropy_hackathon/break-the-model/auto_eval
 
 # Install dependencies
 pip install -r requirements.txt

@@ -16,10 +16,10 @@ venv/
 .cache/
 
 # local harness output: extracted data, mirrors, attack ledgers (keep local)
-/logs/
-/*.sqlite
-/*.sqlite.orig
-/*.csv
-/*.xlsx
+/local-harness/logs/
+/local-harness/*.sqlite
+/local-harness/*.sqlite.orig
+/local-harness/*.csv
+/local-harness/*.xlsx
 mirror.json
 grab.json

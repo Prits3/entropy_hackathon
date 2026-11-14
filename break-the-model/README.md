@@ -15,6 +15,7 @@ Unified red-team findings, **585-turn / 6-model** automated evaluation suite (4 
 | **[03_scripts/](03_scripts/)** | Reproducible probes, SQL extraction scripts, capture validator, and `verify_mitigation.py` defense benchmark. |
 | **[04_data/](04_data/)** | Captured synthetic dataset (343 unique MRNs) + validation notes. |
 | **[05_submission/](05_submission/)** | Submission-form fields, payload catalog (`payloads.json`), and rules-compliance audit. |
+| **[06_claude_5_5/](06_claude_5_5/)** | Claude Haiku 5.5 / Sonnet 5.5 red-team write-ups and the six probe scripts behind them. |
 | **[auto_eval/](auto_eval/)** | Automated sweeper, novel Claude `C1–C10` suite, context/tool-aware detector + 3-layer guardrail (`detection.py`), and Plotly dashboard generator. |
 | **[logs/](logs/)** | Raw JSONL turn logs (585 valid turns across 6 models, including `headline_findings_turns.jsonl` and `claude_novel_*.log`). |
 

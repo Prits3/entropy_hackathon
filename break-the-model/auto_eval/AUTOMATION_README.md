@@ -62,7 +62,7 @@ Automated evaluation, monitoring, and continuous improvement system for prompt i
 
 ### Prerequisites
 ```bash
-cd break-the-model-starter/auto_eval
+cd break-the-model/auto_eval
 pip install -r requirements.txt
 ```
 
