@@ -803,18 +803,16 @@ def _row_html(r: Dict, served: bool, conv_index: Dict[str, List[Dict]], anomaly_
 
 
 def _source_link(r: Dict, served: bool) -> str:
-    """Link to the exact log entry (served) or the log file (static file://)."""
+    """Link to the exact log entry (served) or a portable relative path."""
     name = r["source"] or "—"
     line = r.get("source_line")
     if served:
         label = f"{html.escape(name)}:{line}" if line else html.escape(name)
         url = f"/log/{name}/line/{line}" if line else f"/log/{name}"
         return f'<a href="{html.escape(url)}" target="_blank">{label}</a>'
-    path = analysis.PROJECT_ROOT / name
-    if not path.exists():
-        path = analysis.PROJECT_ROOT / "logs" / name
+    rel = name[len("auto_eval/"):] if name.startswith("auto_eval/") else f"../{name}"
     label = f"{html.escape(name)}:{line}" if line else html.escape(name)
-    return f'<a href="{path.resolve().as_uri()}">{label}</a>'
+    return f'<a href="{html.escape(rel)}">{label}</a>'
 
 
 # ---------------------------------------------------------------------------
@@ -1768,7 +1766,7 @@ def build_html(records: List[Dict], summary: Dict, refresh: int = 0,
     ]
 
     # Build realtime info string (needs to be outside build_figures)
-    output_dir = Path(__file__).parent.parent / "logs"
+    output_dir = "break-the-model/logs"
     realtime_info = f"""
 <div style="padding: 28px; background: #1e293b; border-top: 1px solid #334155;">
 <h3 style="margin-top:0; font-size:14px;">🔴 Live Data Feed</h3>

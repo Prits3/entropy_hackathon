@@ -76,8 +76,8 @@ GitHub does not render HTML files, so open
 after cloning. The charts load Plotly from a CDN and need an internet connection.
 
 The dashboard was regenerated after the report's benchmark with further Claude test suites included,
-so it counts 765 turns and 240 findings (31%). The figures for the four open-weight models are the same
-in both.
+so it counts 959 turns and 328 findings (34%) across 7 models (adding Claude Novel v2–v5 and Claude Opus 5.5).
+The figures for the four open-weight models are the same in both.
 
 <p align="center">
   <img src="assets/dashboard-heatmap.png" alt="Heatmap of leak rate for each model and attack technique" width="100%">
