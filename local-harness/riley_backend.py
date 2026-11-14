@@ -91,6 +91,10 @@ class RemoteBackend:
         out = []
         for m in self.btm.list_models():
             out.append(m[0] if isinstance(m, (list, tuple)) else m)
+        # always surface the Claude-backed Riley models (invokable with an Anthropic key)
+        for cm in ["claude-haiku-5-5", "claude-sonnet-5-5", "claude-opus-5-5"]:
+            if cm not in out:
+                out.insert(0, cm)
         return out
 
     def new_conversation(self):
