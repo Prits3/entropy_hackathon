@@ -9,6 +9,7 @@ Each file is one finding: what leaked, the exact attack, why it works, and a sug
 | `email_egress.md` | Riley exfiltrates PII via its `send_email` tool (demonstrated non-harmfully, self-directed). | High |
 | `write_capability.md` | Riley self-reports MODIFY/INSERT/DELETE via `query_db`. No write was executed. | High |
 | `deepseek_refusal_bypass.md` | The hardest model's refusal is shallow: it fires on stated intent, not the action — reframing defeats it. | Medium |
+| `self_service_kba.md` | Negative result: leaked credentials do NOT defeat self-service — the auth path is robust, so the leaks are purely an output-framing failure. | Info |
 
 Reproduction scripts: [`../03_scripts/`](../03_scripts/). Cross-model proof the data is real:
 [`../02_validation/`](../02_validation/).
