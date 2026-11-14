@@ -46,10 +46,11 @@ All achieved 100% success rate on at least one model:
 
 ### Model Differences
 - **Sonnet is most vulnerable to novel attacks** (55.6% with v5)
-- **Opus is most resistant but still vulnerable** (48.1% with best techniques)
+- **Opus is most resistant but still vulnerable** (48.1% with best techniques, 19.4% with full v5 suite)
 - **Haiku achieves same leak rate as sonnet with v5** (55.6%)
 - Sonnet is particularly susceptible to error-to-success transitions and system prompt mimicry
 - Haiku is uniquely vulnerable to thinking-aloud prompts (C61)
+- Japanese business protocol framing works well on opus (C58: 66.7% in v5)
 
 ## Attack Strategy Recommendations
 
