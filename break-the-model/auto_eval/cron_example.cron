@@ -1,0 +1,29 @@
+# AutoEval Cron Examples
+# Copy to /etc/cron.d/autoeval or add to user crontab (crontab -e)
+
+# Environment setup
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+PYTHONPATH=/path/to/entropy_hack/break-the-model-starter
+
+# ============================================
+# Full sweep every hour
+# ============================================
+0 * * * * root /usr/bin/python3 /path/to/entropy_hack/break-the-model-starter/auto_eval/cron_runner.py --action sweep >> /var/log/autoeval/cron.log 2>&1
+
+# ============================================
+# Single technique tests (for focused evaluation)
+# ============================================
+# Run L1_DIRECT tests every 30 minutes
+*/30 * * * * root /usr/bin/python3 /path/to/entropy_hack/break-the-model-starter/auto_eval/cron_runner.py --action sweep --techniques "L1_DIRECT" >> /var/log/autoeval/l1_direct.log 2>&1
+
+# ============================================
+# Specific model testing
+# ============================================
+# Test specific models every 2 hours
+0 */2 * * * root /usr/bin/python3 /path/to/entropy_hack/break-the-model-starter/auto_eval/cron_runner.py --action sweep --models "model_a,model_b,model_c" >> /var/log/autoeval/specific_models.log 2>&1
+
+# ============================================
+# Status checks (lightweight, runs every 5 minutes)
+# ============================================
+*/5 * * * * root /usr/bin/python3 /path/to/entropy_hack/break-the-model-starter/auto_eval/cron_runner.py --action status >> /var/log/autoeval/status.log 2>&1

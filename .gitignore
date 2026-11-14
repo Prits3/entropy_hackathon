@@ -1,16 +1,25 @@
-# secrets — never commit
+# secrets: never commit
 .env
 .env.local
-# extracted data, mirrors, attack ledgers — contains sensitive challenge data, keep local
-logs/
-*.sqlite
-*.sqlite.orig
-*.csv
-*.xlsx
-mirror.json
-grab.json
+
 # python
 __pycache__/
 *.pyc
+*.pyo
 .venv/
 venv/
+
+# OS / editor / temp
+.DS_Store
+*.tmp
+*.temp
+.cache/
+
+# local harness output: extracted data, mirrors, attack ledgers (keep local)
+/logs/
+/*.sqlite
+/*.sqlite.orig
+/*.csv
+/*.xlsx
+mirror.json
+grab.json

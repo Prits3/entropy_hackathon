@@ -1,0 +1,184 @@
+{
+  "models": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "openai/gpt-oss-120b",
+    "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "deepseek-ai/DeepSeek-V4-Pro-0813"
+  ],
+  "tables": {
+    "providers": {
+      "pk": "provider_id",
+      "summary": {
+        "agree": 3,
+        "conflict": 0,
+        "singleton": 0
+      },
+      "validated_rows": {
+        "1": {
+          "accepting_new_patients": "0",
+          "board_certified": "1",
+          "credential": "DO",
+          "npi": "1039849058",
+          "primary_department_id": "15",
+          "specialty": "Family Medicine",
+          "taxonomy_code": "207Q00000X"
+        },
+        "2": {
+          "accepting_new_patients": "0",
+          "board_certified": "1",
+          "credential": "DO",
+          "npi": "2598844530",
+          "primary_department_id": "17",
+          "specialty": "Family Medicine",
+          "taxonomy_code": "207Q00000X"
+        },
+        "3": {
+          "accepting_new_patients": "0",
+          "board_certified": "1",
+          "credential": "MD",
+          "npi": "2326051309",
+          "primary_department_id": "15",
+          "specialty": "Family Medicine",
+          "taxonomy_code": "207Q00000X"
+        }
+      }
+    },
+    "encounters": {
+      "pk": "encounter_id",
+      "summary": {
+        "agree": 3,
+        "conflict": 0,
+        "singleton": 0
+      },
+      "validated_rows": {
+        "1": {
+          "admit_source": "Walk-in",
+          "attending_provider_id": "51",
+          "chief_complaint": "Abdominal pain",
+          "csn": "1121179891",
+          "department_id": "13",
+          "discharge_disposition": "Discharged to home or self-care",
+          "encounter_class": "EMER",
+          "encounter_type": "Emergency",
+          "end_datetime": "2021-01-17 22:47:00",
+          "facility_id": "2",
+          "patient_id": "1",
+          "start_datetime": "2021-01-17 16:06:00",
+          "status": "Completed"
+        },
+        "2": {
+          "attending_provider_id": "1",
+          "chief_complaint": "Follow-up of chronic conditions",
+          "csn": "1161457658",
+          "department_id": "15",
+          "encounter_class": "VR",
+          "encounter_type": "Telehealth Visit",
+          "end_datetime": "2021-03-24 15:26:00",
+          "facility_id": "3",
+          "patient_id": "1",
+          "start_datetime": "2021-03-24 15:00:00",
+          "status": "Completed"
+        },
+        "3": {
+          "attending_provider_id": "1",
+          "chief_complaint": "Follow-up of chronic conditions",
+          "csn": "1149016138",
+          "department_id": "15",
+          "encounter_class": "AMB",
+          "encounter_type": "Office Visit",
+          "end_datetime": "2021-03-29 09:53:00",
+          "facility_id": "3",
+          "patient_id": "1",
+          "start_datetime": "2021-03-29 09:20:00",
+          "status": "Completed"
+        }
+      }
+    },
+    "patient_coverage": {
+      "pk": "coverage_id",
+      "summary": {
+        "agree": 3,
+        "conflict": 0,
+        "singleton": 0
+      },
+      "validated_rows": {
+        "1": {
+          "coverage_priority": "1",
+          "effective_date": "2022-01-01",
+          "group_number": "SRH000417",
+          "member_id": "GLX452948227",
+          "patient_id": "1",
+          "plan_id": "4",
+          "relationship_to_subscriber": "Self",
+          "subscriber_dob": "1979-12-21",
+          "subscriber_first_name": "Amy",
+          "subscriber_last_name": "Singh"
+        },
+        "2": {
+          "coverage_priority": "1",
+          "effective_date": "2016-01-01",
+          "group_number": "SRH000417",
+          "member_id": "GLX848547993",
+          "patient_id": "2",
+          "plan_id": "5",
+          "relationship_to_subscriber": "Self",
+          "subscriber_dob": "1982-04-08",
+          "subscriber_first_name": "Amanda",
+          "subscriber_last_name": "Lewis"
+        },
+        "3": {
+          "coverage_priority": "1",
+          "effective_date": "2016-01-01",
+          "group_number": "SRH000417",
+          "member_id": "GLX103457858",
+          "patient_id": "3",
+          "plan_id": "4",
+          "relationship_to_subscriber": "Self",
+          "subscriber_dob": "1983-11-12",
+          "subscriber_first_name": "Jian",
+          "subscriber_last_name": "Zhao"
+        }
+      }
+    },
+    "patient_contacts": {
+      "pk": "contact_id",
+      "summary": {
+        "agree": 3,
+        "conflict": 0,
+        "singleton": 0
+      },
+      "validated_rows": {
+        "1": {
+          "first_name": "Amanda",
+          "is_emergency_contact": "1",
+          "is_healthcare_poa": "0",
+          "is_legal_guardian": "0",
+          "last_name": "Singh",
+          "patient_id": "1",
+          "phone": "(614) 555-0128",
+          "relationship": "Sister"
+        },
+        "2": {
+          "first_name": "Dawn",
+          "is_emergency_contact": "1",
+          "is_healthcare_poa": "0",
+          "is_legal_guardian": "0",
+          "last_name": "Lewis",
+          "patient_id": "2",
+          "phone": "(614) 555-0136",
+          "relationship": "Sister"
+        },
+        "3": {
+          "first_name": "Grace",
+          "is_emergency_contact": "1",
+          "is_healthcare_poa": "0",
+          "is_legal_guardian": "0",
+          "last_name": "Zhao",
+          "patient_id": "3",
+          "phone": "(614) 555-0159",
+          "relationship": "Sister"
+        }
+      }
+    }
+  }
+}
