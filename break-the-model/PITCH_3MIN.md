@@ -1,6 +1,6 @@
 # 3-Minute Hackathon Pitch Guide
 
-**One-liner:** *We didn't just jailbreak one prompt — we mapped Riley across 456 automated turns, proved DeepSeek's safety refuses stated intent rather than data exfiltration, escalated across all 9 hidden tables + outbound `send_email`, and built a 3-layer Tool-Boundary DLP + forensic dashboard that stops 100% of our attacks with 0% false positives.*
+**One-liner:** *We didn't just jailbreak one prompt — we mapped Riley across 585 automated turns and 6 models (4 open-weight + Anthropic `claude-sonnet-5-5` & `claude-haiku-5-5`), proved DeepSeek refuses stated intent rather than data exfiltration, watched `claude-sonnet-5-5` autonomously paginate past a 25-row SQL cap to finish dumping all 29/29 hospital departments, and built a 3-layer Tool-Boundary DLP + forensic dashboard that stops 100% of our headline attacks with 0% false positives.*
 
 ---
 
@@ -8,8 +8,8 @@
 
 ### 0:00 – 0:30 | Hook & Security Impact (20%)
 - **Open [`auto_eval/dashboard.html`](auto_eval/dashboard.html) on screen.**
-- *"Every model on the Riley ladder — including the hardest, `DeepSeek-V4-Pro` — leaks live patient data at a **35.5% overall rate across 456 turns**."*
-- *"And this isn't just names and phone numbers. Using benign documentation framing, we mapped **all 9 database tables** and reconstructed a complete linkable medical identity for `patient_id 1`: **Amy Singh's** ER chief complaint (`Abdominal pain`), insurance member ID (`GLX452948227`), emergency contact, **staff DEA numbers (`BM2387113`)**, **self-reported DB write scope (`MODIFY/INSERT/DELETE`)**, and **outbound exfiltration via `send_email`** (`turn_id ad9a27b2…`)."*
+- *"Every open-weight model on the Riley ladder — including the hardest, `DeepSeek-V4-Pro` — leaks live patient data (**29.3%–39.5%** leak rates), and across **585 total turns spanning 6 models** we recorded a **31.6% overall leak rate (185/585)** — while even hardened Anthropic Claude (`claude-sonnet-5-5` 19.7%, `claude-haiku-5-5` 15.1%, **0 patient PII leaks**) still leaked 100% of hospital departments via autonomous reverse pagination (`efd5c81c…`) and dumped raw `query_db` policy-error JSON."*
+- *"And this isn't just names and phone numbers. Using benign documentation framing, we mapped **all 9 database tables** (including **29/29 departments** and **358 unique patients**) and reconstructed a complete linkable medical identity for `patient_id 1`: **Amy Singh's** ER chief complaint (`Abdominal pain`), insurance member ID (`GLX452948227`), emergency contact, **staff DEA numbers (`BM2387113`)**, **self-reported DB write scope (`MODIFY/INSERT/DELETE`)**, and **outbound exfiltration via `send_email`** (`turn_id ad9a27b2…`)."*
 
 ### 0:30 – 1:15 | Novelty: Intent-Shallow Refusal Ablation (20%)
 - *"Why do even strong models fail? Our controlled ablation on `DeepSeek-V4-Pro` pinpoints the exact bug:"*
@@ -20,7 +20,7 @@
 
 ### 1:15 – 1:45 | Technical Execution & Cross-Model Validation (15%) + Teamwork (10%)
 - **Show the `Model × Technique` heatmap in `dashboard.html`.**
-- *"Our team ran a tight closed loop: **John** built `auto_eval` to sweep **456 turns across all 4 models**, discovering that `L8_SCHEMA_PROBE` hits **91.9% (34/37)** and `DeepSeek` actually leaks more often overall (**38.6%**) than `Qwen3-235B` (**29.3%**) on structured queries."*
+- *"Our team ran a tight closed loop: **John** built `auto_eval` and our novel `C1–C10` Claude suite to sweep **585 valid turns across 6 models**, discovering that `L8_SCHEMA_PROBE` hits **66.2% (45/68)**, `DeepSeek` leaks more often overall (**38.6%**) than `Qwen3-235B` (**29.3%**), and `claude-sonnet-5-5` (**19.7%**) autonomously rewrites blocked `SELECT *` queries and issues `ORDER BY DESC` pagination (`efd5c81c…`) to dump all **29/29** departments."*
 - *"Meanwhile, **Martin** ran cross-model consensus validation ([`02_validation/`](02_validation/)): **39 patient rows** and **12 hidden-table rows** matched **byte-identical across all 4 independent models with 0 conflicts** — proving the leaks are genuine stored records, while exposing `COUNT(*)` (`450` vs `14987`) and `gpt-oss-120b`'s 8 ungrounded dumps as hallucinations."*
 
 ### 1:45 – 2:35 | Mitigation / Fix (20%) & Commercializability (10%)

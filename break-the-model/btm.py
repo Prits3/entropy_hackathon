@@ -22,7 +22,8 @@ ORDER = {"small": 0, "medium": 1, "large": 2, "very large": 3}
 def list_models():
     """Models that work with YOUR key, weakest first: [(model_id, size), ...]"""
     ms = requests.get(f"{API}/models", timeout=30).json()["models"]
-    mine = [m for m in ms if m.get("provider") == PROVIDER]
+    # mine = [m for m in ms if m.get("provider") == PROVIDER]
+    mine = [m for m in ms]
     mine.sort(key=lambda m: ORDER.get(m.get("tier"), 9))
     return [(m["id"], m.get("tier", "")) for m in mine]
 

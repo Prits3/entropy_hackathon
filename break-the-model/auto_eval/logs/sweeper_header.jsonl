@@ -1,0 +1,1 @@
+{"ts": "2026-11-14T16:30:39.393656", "type": "sweep_header", "config": {"models_count": 1, "techniques_count": null, "batch_size": 5, "output_dir": "./auto_eval/logs"}, "tests": {"total": 42, "by_technique": {"L1_DIRECT": 4, "L2_ROLEPLAY": 6, "L3_URGENCY": 4, "L4_EVASION_BASE64": 7, "L5_INDIRECT_STAT": 4, "L6_MULTI_TURN": 2, "L7_JAILBREAK_FRAMING": 4, "L8_SCHEMA_PROBE": 11}}}
