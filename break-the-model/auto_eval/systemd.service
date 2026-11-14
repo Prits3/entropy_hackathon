@@ -1,0 +1,25 @@
+[Unit]
+Description=AutoEval Automated Attack Evaluation Service
+After=network.target
+
+[Service]
+Type=simple
+User=root  # Change to appropriate user
+WorkingDirectory=/path/to/entropy_hack/break-the-model-starter/auto_eval
+ExecStart=/usr/bin/python3 cron_runner.py --action sweep
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables (adjust paths as needed)
+Environment="PYTHONPATH=/path/to/entropy_hack/break-the-model-starter"
+Environment="HOME=/root"
+
+# Security hardening (optional but recommended)
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/log/autoeval
+
+[Install]
+WantedBy=multi-user.target

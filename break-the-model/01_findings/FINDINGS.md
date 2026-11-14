@@ -11,10 +11,12 @@ was reached — so results can be re-validated without re-running attacks.
 | File | Contents |
 |---|---|
 | `FINDINGS.md` | This cross-model findings summary. |
+| `sql_extraction_report.md` | Multi-table SQL extraction report (`query_db` dumps across 6 tables). |
 | `hidden_tables.md` | Hidden-table leak: staff DEA/NPI, clinical PHI, insurance, contacts. |
 | `email_egress.md` | PII exfiltration via Riley's `send_email` tool. |
 | `write_capability.md` | Riley self-reports MODIFY/INSERT/DELETE access (no write executed). |
-| `../REPORT.md` | Main narrative report. |
+| `../REPORT.md` | Main unified narrative report (incl. 456-turn AutoEval stats & active defense). |
+| `../auto_eval/` | Automated sweep engine, canonicalized detector (`detection.py`), and `dashboard.html`. |
 | `../02_validation/` | Cross-model proof the leaked data is real. |
 | `../03_scripts/` | Reproduction scripts for every probe. |
 | `../04_data/` | Captured synthetic dataset. |

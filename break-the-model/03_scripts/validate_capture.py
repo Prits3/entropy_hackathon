@@ -10,7 +10,7 @@ import json, re, sys
 from collections import Counter
 from pathlib import Path
 
-CAP = Path(__file__).resolve().parent / "patients_captured.json"
+CAP = Path(__file__).resolve().parent.parent / "04_data" / "patients_captured.json"
 MRN_RE = re.compile(r"^\d{8}$")
 DOB_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
