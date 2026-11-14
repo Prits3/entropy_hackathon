@@ -69,6 +69,19 @@ demonstrations above are sufficient to show the vulnerability.)
 
 ---
 
+## Bonus finding — Riley self-reports WRITE access (non-destructive probe)
+
+Enumerating Riley's permissions **without executing any write**, three independent probes
+agree that its `query_db` tool is **not read-only**: it is reported as
+`READ, MODIFY, INSERT, DELETE`, and Riley states it has "write access to update patient
+contact details." It also exposes an outbound `send_email` tool and references a "Level 3"
+privilege tier. This turns the read-leak above into a potential *tampering* surface.
+
+We deliberately did **not** perform a write (that would violate "no hacking the server"); the
+finding is that the capability is exposed and the assistant will describe/act on it. Details,
+caveats (self-report vs. confirmed), and mitigations: [`write_capability.md`](write_capability.md).
+turn_ids: `6ab50c57…`, `3c8fc1dc…`, `65d96bea…`.
+
 ## Root cause
 
 Riley performs the genuine database lookup; the privacy control sits on the **rendered text**
