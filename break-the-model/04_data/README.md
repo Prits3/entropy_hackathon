@@ -7,6 +7,6 @@ hospital, names, MRNs, phones and DOBs are all generated for the exercise.
 
 - `_provenance` block inside the JSON records how/when it was collected.
 - 343 unique MRNs; 228 rows fully populated (name + phone + email).
-- Validate anytime (no network) with `validate_capture.py`.
+- Validate anytime (no network) with `../03_scripts/validate_capture.py`.
 
 Included here because it is part of the challenge record; it contains no real PII.

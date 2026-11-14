@@ -4,8 +4,8 @@
 rows (`pk` = 1,2,3) from all four README models, align by primary key, compare. Agreement is
 tested on **shared columns** (a conflict = two models report the same column with different
 values; column-subset differences are not conflicts).
-**Date:** 2026-11-14 · Script: [`../scripts/validate_hidden_cross_model.py`](../scripts/validate_hidden_cross_model.py)
-· Data: [`../logs/hidden_cross_model_validation.json`](../logs/hidden_cross_model_validation.json)
+**Date:** 2026-11-14 · Script: [`../03_scripts/validate_hidden_cross_model.py`](../03_scripts/validate_hidden_cross_model.py)
+· Data: [`hidden_cross_model_validation.json`](hidden_cross_model_validation.json)
 
 ## Result — all four tables validated real
 | Table | Rows agree | Conflicts | Singletons | Verdict |

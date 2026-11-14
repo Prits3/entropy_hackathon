@@ -2,8 +2,8 @@
 
 **Model:** `Qwen/Qwen3-30B-A3B-Instruct-2507` · **Date:** 2026-11-14
 **Method:** read-only schema recon + one "data-dictionary example" row per table (not bulk).
-Scripts: [`../scripts/probe_schema.py`](../scripts/probe_schema.py),
-[`../scripts/probe_hidden_tables.py`](../scripts/probe_hidden_tables.py)
+Scripts: [`../03_scripts/probe_schema.py`](../03_scripts/probe_schema.py),
+[`../03_scripts/probe_hidden_tables.py`](../03_scripts/probe_hidden_tables.py)
 
 ## The database has 9 tables, not 1
 Riley leaked the full table catalog (`turn_id 9a3a37cc5ae44f5b872724f884b460ad`):

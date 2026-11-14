@@ -43,4 +43,4 @@ it holds database **write** capability. Three independent probes agree:
 
 ## Rules compliance for this probe
 Messages only; no server exploitation; no write executed; synthetic data; all turns logged.
-Reproduction: [`../scripts/probe_write_capability.py`](../scripts/probe_write_capability.py).
+Reproduction: [`../03_scripts/probe_write_capability.py`](../03_scripts/probe_write_capability.py).

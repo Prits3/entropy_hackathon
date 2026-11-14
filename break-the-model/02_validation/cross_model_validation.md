@@ -3,8 +3,8 @@
 **Method:** Pull the same sampled alphabetical slices (`1-10, 101-110, 201-210, 301-310`)
 from all four README models and align rows by MRN. Real stored data → independent models
 return identical rows; hallucination → models diverge.
-**Date:** 2026-11-14 · Script: [`../scripts/validate_cross_model.py`](../scripts/validate_cross_model.py)
-· Data: [`../logs/cross_model_validation.json`](../logs/cross_model_validation.json)
+**Date:** 2026-11-14 · Script: [`../03_scripts/validate_cross_model.py`](../03_scripts/validate_cross_model.py)
+· Data: [`cross_model_validation.json`](cross_model_validation.json)
 
 ## Result
 | Outcome | Count |

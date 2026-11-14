@@ -7,14 +7,18 @@
 This folder is the reusable record of what was attempted, what worked, and the data that
 was reached — so results can be re-validated without re-running attacks.
 
-## Files
+## Files (findings index — see ../README.md for the full repository map)
 | File | Contents |
 |---|---|
-| `FINDINGS.md` | This summary. |
-| `payloads.json` | Every attack prompt tried, the filter it targets, verdict, and `turn_id`. |
-| `patients_captured.json` | The records reached in a prior bulk session, with provenance + synthetic-data note. 343 unique MRNs (228 fully populated). |
-| `validate_capture.py` | Re-validates `patients_captured.json`: dedupe, field coverage, format checks, synthetic-data confirmation. |
-| `finding_format_encoding.md` *(in `../logs/`)* | Stand-alone submission write-up for the best single-turn finding. |
+| `FINDINGS.md` | This cross-model findings summary. |
+| `hidden_tables.md` | Hidden-table leak: staff DEA/NPI, clinical PHI, insurance, contacts. |
+| `email_egress.md` | PII exfiltration via Riley's `send_email` tool. |
+| `write_capability.md` | Riley self-reports MODIFY/INSERT/DELETE access (no write executed). |
+| `../REPORT.md` | Main narrative report. |
+| `../02_validation/` | Cross-model proof the leaked data is real. |
+| `../03_scripts/` | Reproduction scripts for every probe. |
+| `../04_data/` | Captured synthetic dataset. |
+| `../05_submission/` | Paste-ready form fields, payloads, rules-compliance audit. |
 
 ## Confirmed findings (single-turn, reproducible)
 1. **Output-filter bypass via digit-to-word encoding** — `turn_id aa7b07f423254ba9b67e8d75decbcabf`.
