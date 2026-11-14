@@ -1,2 +1,16 @@
+# secrets — never commit
 .env
+.env.local
+# extracted data, mirrors, attack ledgers — contains sensitive challenge data, keep local
+logs/
+*.sqlite
+*.sqlite.orig
+*.csv
+*.xlsx
+mirror.json
+grab.json
+# python
 __pycache__/
+*.pyc
+.venv/
+venv/
