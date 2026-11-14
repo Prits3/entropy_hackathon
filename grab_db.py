@@ -13,8 +13,11 @@ import argparse, csv, json, os, re, time
 from pathlib import Path
 import db_workflow as W
 
-KEY = os.environ.get("GROQ_API_KEY") or os.environ.get("API_KEY", "")
-MODEL = os.environ.get("GRAB_MODEL", "groq/openai/gpt-oss-20b")   # the leaky model
+# Nebius-backed hosted Riley: gpt-oss-120b complies with operational framing, fast,
+# and NOT on the Groq free-tier rate limit. This is the proven extraction path.
+KEY = os.environ.get("GRAB_KEY") or os.environ.get("API_KEY", "")
+MODEL = os.environ.get("GRAB_MODEL", "openai/gpt-oss-120b")
+W._GROQ_GAP = float(os.environ.get("GRAB_GAP", "1.0"))   # Nebius is roomy; little pacing needed
 OUT = Path(__file__).parent / "logs" / "redteam" / "grab"
 OUT.mkdir(parents=True, exist_ok=True)
 STORE = OUT / "grab.json"
